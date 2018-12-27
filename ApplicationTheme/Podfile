@@ -1,0 +1,23 @@
+platform :ios, '11.0'
+
+use_frameworks!
+
+target 'ApplicationThemer' do
+    pod 'Alamofire'
+    pod 'BrightFutures'
+    pod 'SDWebImage'
+    pod 'SDWebImage/GIF'
+    pod 'Swinject'
+    pod 'SwinjectStoryboard'
+end
+
+target 'ApplicationThemerTests' do
+    pod 'BrightFutures'
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'KIF'
+    pod 'KIF-Quick'
+    pod 'Spry'
+    pod 'Spry+Nimble'
+    pod 'AutoEquatable'
+end
