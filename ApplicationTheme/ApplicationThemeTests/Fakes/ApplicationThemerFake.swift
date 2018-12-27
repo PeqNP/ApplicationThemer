@@ -12,22 +12,30 @@ class FakeApplicationThemer: ApplicationThemer, Spryable {
     }
     
     enum Function: String, StringRepresentable {
-        case applyLabel = "apply(_:to:)"
+        case applyToButton = "apply(_:toButton:)"
+        case applyToLabel = "apply(_:toLabel:)"
+        case applyToTextField = "apply(_:toTextField:)"
+        case applyToTextView = "apply(_:toTextView:)"
+        case applyToTableView = "apply(_:toTableView:)"
     }
 
-    func apply(_ theme: ApplicationLabelTheme, to label: UILabel) {
-        return spryify(arguments: theme, label)
+    func apply(_ themes: ButtonTheme..., toButton button: UIButton) {
+        return spryify(arguments: themes, button)
     }
     
-    func apply(_ theme: ApplicationTextFieldTheme, to textField: UITextField) {
-        return spryify(arguments: theme, textField)
+    func apply(_ themes: LabelTheme..., toLabel label: UILabel) {
+        return spryify(arguments: themes, label)
     }
     
-    func apply(_ theme: ApplicationButtonTheme, to button: UIButton) {
-        return spryify(arguments: theme, button)
+    func apply(_ themes: TextFieldTheme..., toTextField textField: UITextField) {
+        return spryify(arguments: themes, textField)
     }
     
-    func apply(_ theme: ApplicationTableViewTheme, to tableView: UITableView) {
-        return spryify(arguments: theme, tableView)
+    func apply(_ themes: TextViewTheme..., toTextView textView: UITextView) {
+        return spryify(arguments: themes, textView)
+    }
+    
+    func apply(_ themes: TableViewTheme..., toTableView tableView: UITableView) {
+        return spryify(arguments: themes, tableView)
     }
 }

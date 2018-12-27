@@ -9,25 +9,25 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel! {
         didSet {
-            themer.apply(.inputField, to: nameLabel)
+            themer.apply(.inputField, toLabel: nameLabel)
         }
     }
     
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
-            themer.apply(.inputField, to: nameTextField)
+            themer.apply(.inputField, toTextField: nameTextField)
         }
     }
     
     @IBOutlet weak var submitButton: UIButton! {
         didSet {
-            themer.apply(.primary, to: submitButton)
+            themer.apply(.primary, toButton: submitButton)
         }
     }
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            themer.apply(.main, to: tableView)
+            themer.apply(.simple, toTableView: tableView)
             tableView.dataSource = self
         }
     }
