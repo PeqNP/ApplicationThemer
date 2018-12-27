@@ -2,7 +2,7 @@ platform :ios, '11.0'
 
 use_frameworks!
 
-target 'ApplicationThemer' do
+target 'ApplicationTheme' do
     pod 'Alamofire'
     pod 'BrightFutures'
     pod 'SDWebImage'
@@ -11,7 +11,7 @@ target 'ApplicationThemer' do
     pod 'SwinjectStoryboard'
 end
 
-target 'ApplicationThemerTests' do
+target 'ApplicationThemeTests' do
     pod 'BrightFutures'
     pod 'Quick'
     pod 'Nimble'
