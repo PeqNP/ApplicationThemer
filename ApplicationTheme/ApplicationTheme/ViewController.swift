@@ -5,32 +5,6 @@
 
 import UIKit
 
-enum ApplicationLabelTheme {
-    case inputField
-    case footer
-}
-
-enum ApplicationTextFieldTheme {
-    case inputField
-}
-
-enum ApplicationButtonTheme {
-    case primary
-    case secondary
-}
-
-enum ApplicationTableViewTheme {
-    case main
-}
-
-protocol ApplicationThemer {
-    func apply(_ theme: ApplicationLabelTheme, to: UILabel)
-    func apply(_ theme: ApplicationTextFieldTheme, to: UITextField)
-    func apply(_ theme: ApplicationButtonTheme, to: UIButton)
-    func apply(_ theme: ApplicationTableViewTheme, to: UITableView)
-
-}
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel! {
