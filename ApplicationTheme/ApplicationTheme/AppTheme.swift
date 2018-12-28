@@ -45,9 +45,15 @@ extension AppTheme: UITheme {
         for style in styles {
             switch style {
             case .primary:
-                print("primary")
+                button.backgroundColor = UIColor.black
+                button.titleLabel?.font = UIFont(name: "Arial-BoldMT", size: 12.0)
+                button.setTitleColor(UIColor.white, for: .normal)
             case .secondary:
-                print("secondary")
+                button.layer.borderColor = UIColor.black.cgColor
+                button.layer.borderWidth = 1.0
+                button.backgroundColor = UIColor.white
+                button.titleLabel?.font = UIFont(name: "Arial-BoldMT", size: 12.0)
+                button.setTitleColor(UIColor.black, for: .normal)
             case .tertiary:
                 print("tertiary")
             }
@@ -58,7 +64,7 @@ extension AppTheme: UITheme {
         for style in styles {
             switch style {
             case .inputField:
-                print("inputField")
+                label.font = UIFont(name: "Arial-BoldMT", size: 14.0)
             case .footer:
                 print("footer")
             case .regular12:
@@ -70,14 +76,35 @@ extension AppTheme: UITheme {
     }
     
     func apply(_ styles: [TextFieldStyle], toTextField textField: UITextField) {
-        
+        for style in styles {
+            switch style {
+            case .inputField:
+                print("inputField")
+            }
+        }
     }
     
     func apply(_ styles: [TextViewStyle], toTextView textView: UITextView) {
-        
+        for style in styles {
+            switch style {
+            case .bold(let text):
+                print("Bolding all text that matches `\(text)`")
+            case .link(let text, let url):
+                print("Making all text `\(text)` go to URL `\(url)`")
+            case .regular12:
+                print("regular12")
+            case .regular15:
+                print("regular15")
+            }
+        }
     }
     
     func apply(_ styles: [TableViewStyle], toTableView tableView: UITableView) {
-        
+        for style in styles {
+            switch style {
+            case .simple:
+                print("simple")
+            }
+        }
     }
 }
