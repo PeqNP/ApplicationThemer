@@ -5,7 +5,7 @@ import Spry
 
 @testable import ApplicationTheme
 
-class FakeApplicationThemer: ApplicationThemer, Spryable {
+class FakeUIThemer: UIThemer, Spryable {
     
     enum ClassFunction: String, StringRepresentable {
         case none
@@ -19,23 +19,23 @@ class FakeApplicationThemer: ApplicationThemer, Spryable {
         case applyToTableView = "apply(_:toTableView:)"
     }
 
-    func apply(_ themes: ButtonTheme..., toButton button: UIButton) {
-        return spryify(arguments: themes, button, fallbackValue: Void())
+    func apply(_ styles: [ButtonStyle], toButton button: UIButton) {
+        return spryify(arguments: styles, button, fallbackValue: Void())
     }
     
-    func apply(_ themes: LabelTheme..., toLabel label: UILabel) {
-        return spryify(arguments: themes, label, fallbackValue: Void())
+    func apply(_ styles: [LabelStyle], toLabel label: UILabel) {
+        return spryify(arguments: styles, label, fallbackValue: Void())
     }
     
-    func apply(_ themes: TextFieldTheme..., toTextField textField: UITextField) {
-        return spryify(arguments: themes, textField, fallbackValue: Void())
+    func apply(_ styles: [TextFieldStyle], toTextField textField: UITextField) {
+        return spryify(arguments: styles, textField, fallbackValue: Void())
     }
     
-    func apply(_ themes: TextViewTheme..., toTextView textView: UITextView) {
-        return spryify(arguments: themes, textView, fallbackValue: Void())
+    func apply(_ styles: [TextViewStyle], toTextView textView: UITextView) {
+        return spryify(arguments: styles, textView, fallbackValue: Void())
     }
     
-    func apply(_ themes: TableViewTheme..., toTableView tableView: UITableView) {
-        return spryify(arguments: themes, tableView, fallbackValue: Void())
+    func apply(_ styles: [TableViewStyle], toTableView tableView: UITableView) {
+        return spryify(arguments: styles, tableView, fallbackValue: Void())
     }
 }

@@ -1,6 +1,7 @@
 import Foundation
 import Nimble
 import Quick
+import Spry
 import Spry_Nimble
 
 @testable import ApplicationTheme
@@ -12,18 +13,19 @@ class ViewControllerSpec: QuickSpec {
         
         describe("given a ViewController") {
             var subject: ViewController!
-            var themer: FakeApplicationThemer!
+            var themer: FakeUIThemer!
             
             beforeEach {
-                themer = FakeApplicationThemer()
+                themer = FakeUIThemer()
                 
                 subject = createViewController(ViewController.self, storyboardName: "Main", storyboardIdentifier: "ViewController")
                 subject.inject(themer: themer)
+                testViewController(subject)
             }
             
             it("should initialize the UI") {
                 let nameLabel = self.getView(ViewID.nameLabel, UILabel.self)
-                expect(themer).to(haveReceived(.applyToLabel, with: LabelTheme.inputField, nameLabel))
+                expect(themer).to(haveReceived(.applyToLabel, with: [LabelStyle.inputField] as [LabelStyle], nameLabel))
             }
         }
         

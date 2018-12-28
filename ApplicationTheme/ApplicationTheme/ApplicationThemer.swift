@@ -7,36 +7,36 @@
 import Foundation
 import UIKit
 
-protocol ApplicationThemer {
-    func apply(_ themes: ButtonTheme..., toButton button: UIButton)
-    func apply(_ themes: LabelTheme..., toLabel label: UILabel)
-    func apply(_ themes: TableViewTheme..., toTableView tableView: UITableView)
-    func apply(_ themes: TextFieldTheme..., toTextField textField: UITextField)
-    func apply(_ themes: TextViewTheme..., toTextView textView: UITextView)
+protocol UIThemer {
+    func apply(_ styles: [ButtonStyle], toButton button: UIButton)
+    func apply(_ styles: [LabelStyle], toLabel label: UILabel)
+    func apply(_ styles: [TableViewStyle], toTableView tableView: UITableView)
+    func apply(_ styles: [TextFieldStyle], toTextField textField: UITextField)
+    func apply(_ styles: [TextViewStyle], toTextView textView: UITextView)
 }
 
-enum ButtonTheme {
+enum ButtonStyle {
     case primary
     case secondary
     case tertiary
 }
 
-enum LabelTheme {
+enum LabelStyle {
     case inputField
     case footer
     case regular12
     case regular15
 }
 
-enum TableViewTheme {
+enum TableViewStyle {
     case simple
 }
 
-enum TextFieldTheme {
+enum TextFieldStyle {
     case inputField
 }
 
-enum TextViewTheme {
+enum TextViewStyle {
     case regular12
     case regular15
     case bold(text: String)

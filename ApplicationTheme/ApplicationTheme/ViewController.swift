@@ -1,4 +1,7 @@
 /**
+ The `themer` doesn't exist after some `IBOutlet` get instantiated.
+ Some `IBOutlet`s do not exist at `inject` time.
+ There needs to be a map between the instantiation of the `IBOutlet` and the setting of the `themer`.
  
  Copyright © 2018 Upstart Illustration LLC. All rights reserved.
  */
@@ -18,43 +21,43 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel! {
         didSet {
             nameLabel.identifier = ViewID.nameLabel
-            themer.apply(.inputField, toLabel: nameLabel)
+            theme.apply(.inputField, toLabel: nameLabel)
         }
     }
     
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
             nameTextField.identifier = ViewID.nameTextField
-            themer.apply(.inputField, toTextField: nameTextField)
+            theme.apply(.inputField, toTextField: nameTextField)
         }
     }
     
     @IBOutlet weak var submitButton: UIButton! {
         didSet {
             submitButton.identifier = ViewID.submitButton
-            themer.apply(.primary, toButton: submitButton)
+            theme.apply(.primary, toButton: submitButton)
         }
     }
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.identifier = ViewID.tableView
-            themer.apply(.simple, toTableView: tableView)
             tableView.dataSource = self
+            theme.apply(.simple, toTableView: tableView)
         }
     }
     
     @IBOutlet weak var logTextView: UITextView! {
         didSet {
             logTextView.identifier = ViewID.logTextView
-            themer.apply(.regular15, .bold(text: "bold"), toTextView: logTextView)
+            theme.apply(.regular15, .bold(text: "bold"), toTextView: logTextView)
         }
     }
     
-    private var themer: ApplicationThemer!
+    private var theme = UIThemeApplier()
     
-    func inject(themer: ApplicationThemer) {
-        self.themer = themer
+    func inject(themer: UIThemer) {
+        theme.themer = themer
     }
     
     override func viewDidLoad() {

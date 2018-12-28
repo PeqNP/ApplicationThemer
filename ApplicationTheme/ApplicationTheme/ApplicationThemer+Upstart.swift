@@ -7,24 +7,24 @@
 import Foundation
 import UIKit
 
-class MyAppThemer: ApplicationThemer {
-    func apply(_ themes: ButtonTheme..., toButton button: UIButton) {
+class AppTheme: UIThemer {
+    func apply(_ styles: [ButtonStyle], toButton button: UIButton) {
         
     }
     
-    func apply(_ themes: LabelTheme..., toLabel label: UILabel) {
+    func apply(_ styles: [LabelStyle], toLabel label: UILabel) {
         
     }
     
-    func apply(_ themes: TextFieldTheme..., toTextField textField: UITextField) {
+    func apply(_ styles: [TextFieldStyle], toTextField textField: UITextField) {
         
     }
     
-    func apply(_ themes: TextViewTheme..., toTextView textView: UITextView) {
+    func apply(_ styles: [TextViewStyle], toTextView textView: UITextView) {
         
     }
     
-    func apply(_ themes: TableViewTheme..., toTableView tableView: UITableView) {
+    func apply(_ styles: [TableViewStyle], toTableView tableView: UITableView) {
         
     }
 }

@@ -23,6 +23,6 @@ internal func testViewController(_ viewController: UIViewController) {
         view.removeFromSuperview()
     }
     UIApplication.shared.keyWindow?.rootViewController = viewController
-    //    self.tester().waitForAnimationsToFinish()
+//    self.tester().waitForAnimationsToFinish()
     crankRunLoop()
 }
