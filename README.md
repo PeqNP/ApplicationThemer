@@ -59,8 +59,9 @@ class AppTheme: UIStyle {
 
 // You don't have to do this, but it certainly makes it more clear as to
 // the relationship between the `UIStyle` and `UITheme`. You could just as
-// easily rename `AppTheme: UIStyle` to `AppStyle`, make this a class
-// (instead of an extension), and have the alias be `AppStyle`.
+// easily rename the `AppTheme: UIStyle` to `AppStyle: UIStyle` (to match
+// naming convention), make this a class (instead of an extension), and
+// have the `typealias` be `AppStyle`.
 extension AppTheme: UITheme {
 
     typealias Style = AppTheme
