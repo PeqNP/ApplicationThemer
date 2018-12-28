@@ -1,7 +1,7 @@
 /**
- Provides coordination to ensure `IBOutlet`, and injected `UITheme`, properties both exist before `*Style`s are applied to respective `UI*` elements.
+ Provides reconciliation when either `IBOutlet` or the `UITheme` do not yet exist. This is achieved by caching the applied `UIStyle`s and applying them when possible.
  
- This also provides a more simple interface to the `UITheme` protocol. The `UITheme.apply*` methods accept an array. This class takes a variadic of styles, which reads much better.
+ This also provides a more simple interface to the `UITheme` protocol. The `UITheme.apply*` methods accept an array. This class takes a variadic of `UIStyle`s, which reads much better.
  */
 
 import Foundation
