@@ -6,6 +6,8 @@ Use protocol to apply themes to UI elements.
 
 I have a very complex, multi-module, application which requires a separation of "themes" per module. This pattern provides me with a way to define the types of styles that can be applied for a given module (or application) and then apply those styles to elements in the app or module layer.
 
+I also needed a very easy way to test if the correct styles were applied to given elements in the UI. Before I was checking the properties on each individual `UIView` type. Yuck! With this pattern you can simply ask whether the `UIStyle`s were applied or not. Simple! The implementation of the styles don't need to be tested. A simple visual inspection is enough.
+
 ## Example
 
 This example shows how you can apply styles to `IBOutlet` properties at the time they are created.
