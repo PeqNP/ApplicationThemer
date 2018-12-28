@@ -13,10 +13,10 @@ class ViewControllerSpec: QuickSpec {
         
         describe("given a ViewController") {
             var subject: ViewController!
-            var themer: FakeUIThemer!
+            var themer: FakeAnyUITheme<AppTheme>!
             
             beforeEach {
-                themer = FakeUIThemer()
+                themer = FakeAnyUITheme<AppTheme>()
                 
                 subject = createViewController(ViewController.self, storyboardName: "Main", storyboardIdentifier: "ViewController")
                 subject.inject(themer: themer)
@@ -25,7 +25,7 @@ class ViewControllerSpec: QuickSpec {
             
             it("should initialize the UI") {
                 let nameLabel = self.getView(ViewID.nameLabel, UILabel.self)
-                expect(themer).to(haveReceived(.applyToLabel, with: [LabelStyle.inputField] as [LabelStyle], nameLabel))
+                expect(themer).to(haveReceived(.applyToLabel, with: [AppTheme.LabelStyle.inputField] as [AppTheme.LabelStyle], nameLabel))
             }
         }
         

@@ -1,7 +1,9 @@
 /**
- The `themer` doesn't exist after some `IBOutlet` get instantiated.
- Some `IBOutlet`s do not exist at `inject` time.
- There needs to be a map between the instantiation of the `IBOutlet` and the setting of the `themer`.
+ Why do we need the `UIThemeApplier`?
+ - Sometimes `themer` doesn't exist at the time the `IBOutlet` is instantiated -- so the app crashes.
+ - Sometimes the `IBOutlet` doesn't exist at the time `themer` is injected -- so the app crashes.
+ 
+ Therefore, there needs to be a way to reconcile when one or the other doesn't exist and map the respective styles when they both exist. The `UIThemeApplier` provides this.
  
  Copyright © 2018 Upstart Illustration LLC. All rights reserved.
  */
@@ -54,10 +56,10 @@ class ViewController: UIViewController {
         }
     }
     
-    private var theme = UIThemeApplier()
+    private var theme = UIThemeApplier<AppTheme>()
     
-    func inject(themer: UIThemer) {
-        theme.themer = themer
+    func inject(themer: AnyUITheme<AppTheme>) {
+        self.theme.concrete = themer
     }
     
     override func viewDidLoad() {

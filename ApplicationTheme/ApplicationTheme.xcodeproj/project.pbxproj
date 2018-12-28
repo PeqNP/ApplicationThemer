@@ -13,9 +13,9 @@
 		0757BF3C21D4A9E200F859D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0757BF3B21D4A9E200F859D1 /* Assets.xcassets */; };
 		0757BF3F21D4A9E200F859D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0757BF3D21D4A9E200F859D1 /* LaunchScreen.storyboard */; };
 		07765DA321D4B24D001DE48C /* ApplicationThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07765DA221D4B24D001DE48C /* ApplicationThemeTests.swift */; };
-		07EC61C621D4B34000FE283C /* ApplicationThemer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61C521D4B34000FE283C /* ApplicationThemer.swift */; };
-		07EC61C821D4B39400FE283C /* ApplicationThemer+Upstart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61C721D4B39400FE283C /* ApplicationThemer+Upstart.swift */; };
-		07EC61CB21D4B3F700FE283C /* FakeApplicationThemer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61CA21D4B3F700FE283C /* FakeApplicationThemer.swift */; };
+		07EC61C621D4B34000FE283C /* UITheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61C521D4B34000FE283C /* UITheme.swift */; };
+		07EC61C821D4B39400FE283C /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61C721D4B39400FE283C /* AppTheme.swift */; };
+		07EC61CB21D4B3F700FE283C /* FakeUIThemer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61CA21D4B3F700FE283C /* FakeUIThemer.swift */; };
 		07EC61CE21D5641B00FE283C /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61CD21D5641B00FE283C /* ViewControllerSpec.swift */; };
 		07EC61D121D564DA00FE283C /* KIF+Upstart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61D021D564DA00FE283C /* KIF+Upstart.swift */; };
 		07EC61D321D564F200FE283C /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61D221D564F200FE283C /* UI.swift */; };
@@ -26,6 +26,7 @@
 		07EC61E121D67D3800FE283C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61E021D67D3800FE283C /* main.swift */; };
 		07EC61E321D67DF700FE283C /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61E221D67DF700FE283C /* TestAppDelegate.swift */; };
 		07EC61E621D68EE600FE283C /* UIThemeApplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61E521D68EE600FE283C /* UIThemeApplier.swift */; };
+		07EC61E821D6BC5000FE283C /* AnyUITheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61E721D6BC5000FE283C /* AnyUITheme.swift */; };
 		B8344210F3A859B489DD5CEE /* Pods_ApplicationTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BE5A873E5073688D4B6F01 /* Pods_ApplicationTheme.framework */; };
 		D614F77AF71528E4AF214487 /* Pods_ApplicationThemeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD00A499769B93FAD1237CC /* Pods_ApplicationThemeTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,9 +52,9 @@
 		07765DA021D4B24D001DE48C /* ApplicationThemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationThemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07765DA221D4B24D001DE48C /* ApplicationThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationThemeTests.swift; sourceTree = "<group>"; };
 		07765DA421D4B24D001DE48C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07EC61C521D4B34000FE283C /* ApplicationThemer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationThemer.swift; sourceTree = "<group>"; };
-		07EC61C721D4B39400FE283C /* ApplicationThemer+Upstart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationThemer+Upstart.swift"; sourceTree = "<group>"; };
-		07EC61CA21D4B3F700FE283C /* FakeApplicationThemer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApplicationThemer.swift; sourceTree = "<group>"; };
+		07EC61C521D4B34000FE283C /* UITheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITheme.swift; sourceTree = "<group>"; };
+		07EC61C721D4B39400FE283C /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		07EC61CA21D4B3F700FE283C /* FakeUIThemer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUIThemer.swift; sourceTree = "<group>"; };
 		07EC61CD21D5641B00FE283C /* ViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 		07EC61D021D564DA00FE283C /* KIF+Upstart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KIF+Upstart.swift"; sourceTree = "<group>"; };
 		07EC61D221D564F200FE283C /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		07EC61E021D67D3800FE283C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		07EC61E221D67DF700FE283C /* TestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppDelegate.swift; sourceTree = "<group>"; };
 		07EC61E521D68EE600FE283C /* UIThemeApplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIThemeApplier.swift; sourceTree = "<group>"; };
+		07EC61E721D6BC5000FE283C /* AnyUITheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyUITheme.swift; sourceTree = "<group>"; };
 		1C3B2F656AD5D9CEFD0D2615 /* Pods-ApplicationTheme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationTheme.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApplicationTheme/Pods-ApplicationTheme.release.xcconfig"; sourceTree = "<group>"; };
 		41BE5A873E5073688D4B6F01 /* Pods_ApplicationTheme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApplicationTheme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B119516297760F9BBFFDA0FC /* Pods-ApplicationThemeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationThemeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApplicationThemeTests/Pods-ApplicationThemeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,8 +121,7 @@
 				07EC61D821D5672D00FE283C /* ViewIdentifiable */,
 				07EC61CC21D5640A00FE283C /* Tests */,
 				0757BF3421D4A9DE00F859D1 /* AppDelegate.swift */,
-				07EC61C521D4B34000FE283C /* ApplicationThemer.swift */,
-				07EC61C721D4B39400FE283C /* ApplicationThemer+Upstart.swift */,
+				07EC61C721D4B39400FE283C /* AppTheme.swift */,
 				0757BF3B21D4A9E200F859D1 /* Assets.xcassets */,
 				0757BF4021D4A9E300F859D1 /* Info.plist */,
 				0757BF3D21D4A9E200F859D1 /* LaunchScreen.storyboard */,
@@ -147,7 +148,7 @@
 		07EC61C921D4B3EA00FE283C /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
-				07EC61CA21D4B3F700FE283C /* FakeApplicationThemer.swift */,
+				07EC61CA21D4B3F700FE283C /* FakeUIThemer.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -190,6 +191,8 @@
 		07EC61E421D68ED900FE283C /* UITheme */ = {
 			isa = PBXGroup;
 			children = (
+				07EC61E721D6BC5000FE283C /* AnyUITheme.swift */,
+				07EC61C521D4B34000FE283C /* UITheme.swift */,
 				07EC61E521D68EE600FE283C /* UIThemeApplier.swift */,
 			);
 			path = UITheme;
@@ -425,9 +428,10 @@
 			files = (
 				07EC61E321D67DF700FE283C /* TestAppDelegate.swift in Sources */,
 				0757BF3721D4A9DE00F859D1 /* ViewController.swift in Sources */,
-				07EC61C821D4B39400FE283C /* ApplicationThemer+Upstart.swift in Sources */,
+				07EC61E821D6BC5000FE283C /* AnyUITheme.swift in Sources */,
+				07EC61C821D4B39400FE283C /* AppTheme.swift in Sources */,
 				07EC61E121D67D3800FE283C /* main.swift in Sources */,
-				07EC61C621D4B34000FE283C /* ApplicationThemer.swift in Sources */,
+				07EC61C621D4B34000FE283C /* UITheme.swift in Sources */,
 				07EC61E621D68EE600FE283C /* UIThemeApplier.swift in Sources */,
 				07EC61DA21D5673D00FE283C /* ViewIdentifiable.swift in Sources */,
 				0757BF3521D4A9DE00F859D1 /* AppDelegate.swift in Sources */,
@@ -442,7 +446,7 @@
 				07EC61D121D564DA00FE283C /* KIF+Upstart.swift in Sources */,
 				07EC61CE21D5641B00FE283C /* ViewControllerSpec.swift in Sources */,
 				07EC61DF21D66DBB00FE283C /* UITheme+Extension.swift in Sources */,
-				07EC61CB21D4B3F700FE283C /* FakeApplicationThemer.swift in Sources */,
+				07EC61CB21D4B3F700FE283C /* FakeUIThemer.swift in Sources */,
 				07EC61D321D564F200FE283C /* UI.swift in Sources */,
 				07EC61D521D564FE00FE283C /* Methods.swift in Sources */,
 				07765DA321D4B24D001DE48C /* ApplicationThemeTests.swift in Sources */,
