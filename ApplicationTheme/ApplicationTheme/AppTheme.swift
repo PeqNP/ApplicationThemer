@@ -38,6 +38,7 @@ class AppTheme: UIStyle {
 }
 
 extension AppTheme: UITheme {
+
     typealias Style = AppTheme
     
     func apply(_ styles: [ButtonStyle], toButton button: UIButton) {
