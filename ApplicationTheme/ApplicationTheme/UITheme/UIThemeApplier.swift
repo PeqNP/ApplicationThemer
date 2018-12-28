@@ -2,29 +2,51 @@
  Provides reconciliation when either `IBOutlet` or the `UITheme` do not yet exist. This is achieved by caching the applied `UIStyle`s and applying them when possible.
  
  This also provides a more simple interface to the `UITheme` protocol. The `UITheme.apply*` methods accept an array. This class takes a variadic of `UIStyle`s, which reads much better.
+ 
+ Copyright © 2018 Upstart Illustration LLC. All rights reserved.
  */
 
 import Foundation
 import UIKit
 
-class UIThemeApplier<T: UITheme & UITheme> where T.Style == T {
+class UIThemeApplier<T: UIStyle> {
     
     var buttonThemes: [([T.ButtonStyle], UIButton)] = []
     var labelThemes: [([T.LabelStyle], UILabel)] = []
     var tableViewThemes: [([T.TableViewStyle], UITableView)] = []
-    var textFieldThemes: [([T.TextViewStyle], UITextView)] = []
+    var textFieldThemes: [([T.TextFieldStyle], UITextField)] = []
     var textViewThemes: [([T.TextViewStyle], UITextView)] = []
     
     var concrete: AnyUITheme<T>? {
         didSet {
+            guard let concrete = concrete else {
+                return
+            }
+            
             buttonThemes.forEach { (element) in
-                concrete?.apply(element.0, toButton: element.1)
+                concrete.apply(element.0, toButton: element.1)
             }
             buttonThemes = []
+            
             labelThemes.forEach { (element) in
-                concrete?.apply(element.0, toLabel: element.1)
+                concrete.apply(element.0, toLabel: element.1)
             }
             labelThemes = []
+            
+            tableViewThemes.forEach { (element) in
+                concrete.apply(element.0, toTableView: element.1)
+            }
+            tableViewThemes = []
+
+            textFieldThemes.forEach { (element) in
+                concrete.apply(element.0, toTextField: element.1)
+            }
+            textFieldThemes = []
+
+            textViewThemes.forEach { (element) in
+                concrete.apply(element.0, toTextView: element.1)
+            }
+            textViewThemes = []
         }
     }
     
@@ -45,14 +67,26 @@ class UIThemeApplier<T: UITheme & UITheme> where T.Style == T {
     }
     
     func apply(_ styles: T.TableViewStyle..., toTableView tableView: UITableView) {
-        
+        guard let theme = concrete else {
+            tableViewThemes.append((styles, tableView))
+            return
+        }
+        theme.apply(styles, toTableView: tableView)
     }
     
     func apply(_ styles: T.TextFieldStyle..., toTextField textField: UITextField) {
-        
+        guard let theme = concrete else {
+            textFieldThemes.append((styles, textField))
+            return
+        }
+        theme.apply(styles, toTextField: textField)
     }
     
     func apply(_ styles: T.TextViewStyle..., toTextView textView: UITextView) {
-        
+        guard let theme = concrete else {
+            textViewThemes.append((styles, textView))
+            return
+        }
+        theme.apply(styles, toTextView: textView)
     }
 }

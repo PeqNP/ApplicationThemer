@@ -58,8 +58,8 @@ class ViewController: UIViewController {
     
     private var theme = UIThemeApplier<AppTheme>()
     
-    func inject(themer: AnyUITheme<AppTheme>) {
-        self.theme.concrete = themer
+    func inject(theme: AnyUITheme<AppTheme>) {
+        self.theme.concrete = theme
     }
     
     override func viewDidLoad() {

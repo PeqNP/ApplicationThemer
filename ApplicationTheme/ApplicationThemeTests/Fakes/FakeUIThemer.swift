@@ -7,31 +7,19 @@ import Spry
 
 import UIKit
 
+/// Required to eliminate the necessary of creating an instance of the `UITheme`.
 private class FakeUITheme<T: UIStyle>: UITheme {
+    
     typealias Style = T
     
-    func apply(_ styles: [T.ButtonStyle], toButton button: UIButton) {
-        
-    }
-    
-    func apply(_ styles: [T.LabelStyle], toLabel label: UILabel) {
-        
-    }
-    
-    func apply(_ styles: [T.TableViewStyle], toTableView tableView: UITableView) {
-        
-    }
-    
-    func apply(_ styles: [T.TextFieldStyle], toTextField textField: UITextField) {
-        
-    }
-    
-    func apply(_ styles: [T.TextViewStyle], toTextView textView: UITextView) {
-        
-    }
+    func apply(_ styles: [T.ButtonStyle], toButton button: UIButton) { }
+    func apply(_ styles: [T.LabelStyle], toLabel label: UILabel) { }
+    func apply(_ styles: [T.TableViewStyle], toTableView tableView: UITableView) { }
+    func apply(_ styles: [T.TextFieldStyle], toTextField textField: UITextField) { }
+    func apply(_ styles: [T.TextViewStyle], toTextView textView: UITextView) { }
 }
 
-class FakeAnyUITheme<T: UITheme & UITheme>: AnyUITheme<T>, Spryable where T.Style == T {
+class FakeAnyUITheme<T: UIStyle>: AnyUITheme<T>, Spryable {
     
     typealias Style = T
     

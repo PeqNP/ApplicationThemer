@@ -27,6 +27,7 @@
 		07EC61E321D67DF700FE283C /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61E221D67DF700FE283C /* TestAppDelegate.swift */; };
 		07EC61E621D68EE600FE283C /* UIThemeApplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61E521D68EE600FE283C /* UIThemeApplier.swift */; };
 		07EC61E821D6BC5000FE283C /* AnyUITheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61E721D6BC5000FE283C /* AnyUITheme.swift */; };
+		07EC61EA21D6C4F500FE283C /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC61E921D6C4F500FE283C /* Assembly.swift */; };
 		B8344210F3A859B489DD5CEE /* Pods_ApplicationTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BE5A873E5073688D4B6F01 /* Pods_ApplicationTheme.framework */; };
 		D614F77AF71528E4AF214487 /* Pods_ApplicationThemeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD00A499769B93FAD1237CC /* Pods_ApplicationThemeTests.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		07EC61E221D67DF700FE283C /* TestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppDelegate.swift; sourceTree = "<group>"; };
 		07EC61E521D68EE600FE283C /* UIThemeApplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIThemeApplier.swift; sourceTree = "<group>"; };
 		07EC61E721D6BC5000FE283C /* AnyUITheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyUITheme.swift; sourceTree = "<group>"; };
+		07EC61E921D6C4F500FE283C /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		1C3B2F656AD5D9CEFD0D2615 /* Pods-ApplicationTheme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationTheme.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApplicationTheme/Pods-ApplicationTheme.release.xcconfig"; sourceTree = "<group>"; };
 		41BE5A873E5073688D4B6F01 /* Pods_ApplicationTheme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApplicationTheme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B119516297760F9BBFFDA0FC /* Pods-ApplicationThemeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationThemeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApplicationThemeTests/Pods-ApplicationThemeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				07EC61CC21D5640A00FE283C /* Tests */,
 				0757BF3421D4A9DE00F859D1 /* AppDelegate.swift */,
 				07EC61C721D4B39400FE283C /* AppTheme.swift */,
+				07EC61E921D6C4F500FE283C /* Assembly.swift */,
 				0757BF3B21D4A9E200F859D1 /* Assets.xcassets */,
 				0757BF4021D4A9E300F859D1 /* Info.plist */,
 				0757BF3D21D4A9E200F859D1 /* LaunchScreen.storyboard */,
@@ -427,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07EC61E321D67DF700FE283C /* TestAppDelegate.swift in Sources */,
+				07EC61EA21D6C4F500FE283C /* Assembly.swift in Sources */,
 				0757BF3721D4A9DE00F859D1 /* ViewController.swift in Sources */,
 				07EC61E821D6BC5000FE283C /* AnyUITheme.swift in Sources */,
 				07EC61C821D4B39400FE283C /* AppTheme.swift in Sources */,

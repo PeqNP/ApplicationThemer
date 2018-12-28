@@ -54,7 +54,18 @@ extension AppTheme: UITheme {
     }
     
     func apply(_ styles: [LabelStyle], toLabel label: UILabel) {
-        
+        for style in styles {
+            switch style {
+            case .inputField:
+                print("inputField")
+            case .footer:
+                print("footer")
+            case .regular12:
+                print("regular12")
+            case .regular15:
+                print("regular15")
+            }
+        }
     }
     
     func apply(_ styles: [TextFieldStyle], toTextField textField: UITextField) {
