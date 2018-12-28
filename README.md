@@ -1,10 +1,10 @@
-# ApplicationTheme
+# UITheme
 
 Use protocol to apply themes to UI elements.
 
 ## Why?
 
-I have a very complex, multi-module, application which requires a separation of "themes" per module. This pattern provides me with a way to define the tyeps of styles that can be applied for a given module (or application) and then apply those styles to elements in the app or module layer.
+I have a very complex, multi-module, application which requires a separation of "themes" per module. This pattern provides me with a way to define the types of styles that can be applied for a given module (or application) and then apply those styles to elements in the app or module layer.
 
 ## Example
 
@@ -35,7 +35,8 @@ class ViewController: UIViewController {
 
     func inject(theme: AnyUITheme<AppTheme>) {
         self.theme.concrete = theme
-        // ^^ setting the `concrete` instance here reconciles any themes that attempted to be applied before `concrete` was provided.
+        // ^^ setting the `concrete` instance here reconciles any themes that
+        // attempted to be applied before `concrete` was provided.
     }
 
     // ...
@@ -53,10 +54,13 @@ class AppTheme: UIStyle {
         case tertiary
     }
 
-    // ... you'll have to ensure all `*Style`s are provided.
+    // ... conform to the remaining styles
 }
 
-// You don't have to do this, but it certainly makes it more clear as to the relationship between the `UIStyle` and `UITheme`. You could just as easily rename `AppTheme: UIStyle` to `AppStyle`, make this a class (instead of an extension), and have the alias be `AppStyle`.
+// You don't have to do this, but it certainly makes it more clear as to
+// the relationship between the `UIStyle` and `UITheme`. You could just as
+// easily rename `AppTheme: UIStyle` to `AppStyle`, make this a class
+// (instead of an extension), and have the alias be `AppStyle`.
 extension AppTheme: UITheme {
 
     typealias Style = AppTheme
@@ -78,5 +82,3 @@ extension AppTheme: UITheme {
 }
 
 ```
-
-## TODO
