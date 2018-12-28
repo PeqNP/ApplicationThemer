@@ -20,22 +20,22 @@ class FakeApplicationThemer: ApplicationThemer, Spryable {
     }
 
     func apply(_ themes: ButtonTheme..., toButton button: UIButton) {
-        return spryify(arguments: themes, button)
+        return spryify(arguments: themes, button, fallbackValue: Void())
     }
     
     func apply(_ themes: LabelTheme..., toLabel label: UILabel) {
-        return spryify(arguments: themes, label)
+        return spryify(arguments: themes, label, fallbackValue: Void())
     }
     
     func apply(_ themes: TextFieldTheme..., toTextField textField: UITextField) {
-        return spryify(arguments: themes, textField)
+        return spryify(arguments: themes, textField, fallbackValue: Void())
     }
     
     func apply(_ themes: TextViewTheme..., toTextView textView: UITextView) {
-        return spryify(arguments: themes, textView)
+        return spryify(arguments: themes, textView, fallbackValue: Void())
     }
     
     func apply(_ themes: TableViewTheme..., toTableView tableView: UITableView) {
-        return spryify(arguments: themes, tableView)
+        return spryify(arguments: themes, tableView, fallbackValue: Void())
     }
 }

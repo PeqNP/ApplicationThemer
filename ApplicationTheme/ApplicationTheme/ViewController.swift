@@ -7,28 +7,47 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    enum ViewID: ViewIdentifiable {
+        case nameLabel
+        case nameTextField
+        case submitButton
+        case tableView
+        case logTextView
+    }
+    
     @IBOutlet weak var nameLabel: UILabel! {
         didSet {
+            nameLabel.identifier = ViewID.nameLabel
             themer.apply(.inputField, toLabel: nameLabel)
         }
     }
     
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
+            nameTextField.identifier = ViewID.nameTextField
             themer.apply(.inputField, toTextField: nameTextField)
         }
     }
     
     @IBOutlet weak var submitButton: UIButton! {
         didSet {
+            submitButton.identifier = ViewID.submitButton
             themer.apply(.primary, toButton: submitButton)
         }
     }
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
+            tableView.identifier = ViewID.tableView
             themer.apply(.simple, toTableView: tableView)
             tableView.dataSource = self
+        }
+    }
+    
+    @IBOutlet weak var logTextView: UITextView! {
+        didSet {
+            logTextView.identifier = ViewID.logTextView
+            themer.apply(.regular15, .bold(text: "bold"), toTextView: logTextView)
         }
     }
     

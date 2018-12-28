@@ -17,6 +17,7 @@ target 'ApplicationThemeTests' do
     pod 'Nimble'
     pod 'KIF'
     pod 'KIF-Quick'
+    pod 'KIF/IdentifierTests'
     pod 'Spry'
     pod 'Spry+Nimble'
     pod 'AutoEquatable'

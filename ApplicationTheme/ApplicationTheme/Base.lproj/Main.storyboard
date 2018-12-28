@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ApplicationTheme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ApplicationTheme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,6 +44,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R5K-wE-6er">
+                                <rect key="frame" x="20" y="466" width="335" height="181"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -52,16 +59,21 @@
                             <constraint firstItem="7l9-Jo-lDI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EhC-UM-QBy"/>
                             <constraint firstItem="bDv-gj-nBA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FHf-uA-kRg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7l9-Jo-lDI" secondAttribute="trailing" constant="20" id="O6T-1y-xDk"/>
+                            <constraint firstItem="R5K-wE-6er" firstAttribute="top" secondItem="Rl4-hz-4BG" secondAttribute="bottom" constant="20" id="RWG-9V-USP"/>
                             <constraint firstItem="Rl4-hz-4BG" firstAttribute="top" secondItem="7l9-Jo-lDI" secondAttribute="bottom" constant="30" id="TPU-y6-7M1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R5K-wE-6er" secondAttribute="bottom" constant="20" id="WtH-i5-yMZ"/>
                             <constraint firstItem="Rl4-hz-4BG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cKc-7x-Gj1"/>
                             <constraint firstItem="EeQ-IG-MOY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="j2n-cS-2BS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EeQ-IG-MOY" secondAttribute="trailing" constant="20" id="lx8-Ok-Xd0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R5K-wE-6er" secondAttribute="trailing" constant="20" id="r9K-xo-wOo"/>
                             <constraint firstItem="bDv-gj-nBA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="79" id="yGe-VS-EFJ"/>
                             <constraint firstItem="7l9-Jo-lDI" firstAttribute="top" secondItem="bDv-gj-nBA" secondAttribute="bottom" constant="56" id="zpt-gw-WrO"/>
+                            <constraint firstItem="R5K-wE-6er" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zsB-Aa-Hyj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="logTextView" destination="R5K-wE-6er" id="cN4-vt-c9K"/>
                         <outlet property="nameLabel" destination="bDv-gj-nBA" id="yfe-fz-eWJ"/>
                         <outlet property="nameTextField" destination="EeQ-IG-MOY" id="je0-GI-a3b"/>
                         <outlet property="submitButton" destination="7l9-Jo-lDI" id="5QL-NW-Uoy"/>

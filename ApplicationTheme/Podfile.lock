@@ -10,6 +10,8 @@ PODS:
     - KIF (~> 3.0)
     - Quick (~> 1.0)
   - KIF/Core (3.7.4)
+  - KIF/IdentifierTests (3.7.4):
+    - KIF/Core
   - Nimble (7.3.1)
   - Quick (1.3.2)
   - Result (4.0.0)
@@ -33,6 +35,7 @@ DEPENDENCIES:
   - BrightFutures
   - KIF
   - KIF-Quick
+  - KIF/IdentifierTests
   - Nimble
   - Quick
   - SDWebImage
@@ -75,6 +78,6 @@ SPEC CHECKSUMS:
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
   SwinjectStoryboard: 688f096033103e66ffcf6ca678211acd7d7be505
 
-PODFILE CHECKSUM: 3b1895e9086d391cb6e8148060866811a7b4a817
+PODFILE CHECKSUM: 08d6bff5512c001d3005661f8707b6591c172bf3
 
 COCOAPODS: 1.5.3
