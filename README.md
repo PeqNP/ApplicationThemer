@@ -85,3 +85,9 @@ extension AppTheme: UITheme {
 }
 
 ```
+
+## TODO
+
+- Use `UIAppearance` where necessary
+- Show how an A/B test can be used for a theme.
+- Show how an embedded view can access a default instance of the theme class using `AppTheme.default`. The `default` var would get the default `Swinject` container. It's not ideal, but it's better than a global singleton, and still provides a way for the embedded view to be tested.
