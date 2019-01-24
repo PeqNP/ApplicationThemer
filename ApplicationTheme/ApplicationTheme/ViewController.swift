@@ -61,10 +61,6 @@ class ViewController: UIViewController {
     func inject(theme: AnyUITheme<AppTheme>) {
         self.theme.concrete = theme
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }
 
 extension ViewController: UITableViewDataSource {
