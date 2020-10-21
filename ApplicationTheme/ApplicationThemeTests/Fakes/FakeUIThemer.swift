@@ -17,6 +17,9 @@ private class FakeUITheme<T: UIStyle>: UITheme {
     func apply(_ styles: [T.TableViewStyle], toTableView tableView: UITableView) { }
     func apply(_ styles: [T.TextFieldStyle], toTextField textField: UITextField) { }
     func apply(_ styles: [T.TextViewStyle], toTextView textView: UITextView) { }
+    func apply(_ styles: [T.ImageStyle], toImage image: UIImageView) { }
+    func apply(_ styles: [T.ViewStyle], toView view: UIView) { }
+    func apply(_ styles: [T.ProgressViewStyle], toProgressView progressView: UIProgressView) { }
 }
 
 class FakeAnyUITheme<T: UIStyle>: AnyUITheme<T>, Spryable {

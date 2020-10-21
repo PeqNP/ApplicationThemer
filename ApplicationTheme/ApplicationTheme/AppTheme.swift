@@ -35,6 +35,18 @@ class AppTheme: UIStyle {
         case bold(text: String)
         case link(text: String, url: URL)
     }
+
+    enum ImageStyle {
+        case empty
+    }
+
+    enum ViewStyle {
+        case empty
+    }
+
+    enum ProgressViewStyle {
+        case empty
+    }
 }
 
 extension AppTheme: UITheme {
@@ -106,5 +118,17 @@ extension AppTheme: UITheme {
                 print("simple")
             }
         }
+    }
+
+    func apply(_ styles: [ImageStyle], toImage image: UIImageView) {
+
+    }
+
+    func apply(_ styles: [ViewStyle], toView view: UIView) {
+
+    }
+
+    func apply(_ styles: [ProgressViewStyle], toProgressView progressView: UIProgressView) {
+
     }
 }
